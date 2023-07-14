@@ -1,0 +1,141 @@
+/* Start Global Design */
+html,body{
+  direction: ltr;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url(../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+/* End Global Design */
+
+/* Start Top Navbar */
+.navbar-light .navbar-nav .nav-link i{
+  margin-right: 8px;
+  margin-left: 0;
+}
+.navbar-light .navbar-nav .nav-link .fa-chevron-down{
+  padding-right: 7px;
+}
+/* End Top Navbar */
+
+/*  Start Expoler More */
+.expoler-more .col-lg-6:first-of-type h2{
+  position: relative;
+  left: -13px;
+}
+/*  End Expoler More */
+
+/* Start common banner */
+.section-common h1{
+  left: 35%;
+}
+/* End common banner */
+
+/* Start Button Scroll To Top */
+.go-top {
+  left: 3%;
+  right: 0;
+}
+/* End Button Scroll To Top */
+
+/* Start Product Brannd */
+.group-style .content .stat-items span{
+  font-size: 22px;
+}
+.group-style .content .stat-items b{font-size: 12;}
+.group-style .content .col-lg-3 .stat-items::after{right: 0;}
+/* End Product Brannd */
+
+/* Start Section Details */
+.section-details .content{
+  background-color: unset;
+  left: 18px;
+  text-align: center;
+  top: 60px;
+}
+.section-details h3{    font-size: 35px;}
+.s-d-2 .content{    left: 25%;}
+.s-d-3 .content{    left: 24%;}
+.s-d-4 .content{    left: 15%;}
+.s-d-5 .content{    left: 22%;}
+/* End Section Details */
+
+/* Start Section Blade Battery  */
+.section-blade-battery .content ul li{
+  padding-right: 0px;
+  padding-left: 30px;
+}
+.section-blade-battery .content ul li::after{
+  left: -20px;
+  right: 0;
+}
+/* End Section Blade Battery  */
+
+/* Start Section Details Car */
+.section-details-car .content ul li::after{
+  right: -42px;
+}
+/* End Section Details Car */
+
+/* Start Section News */
+.section-news .header-section .filter button{
+  right: 35px;
+}
+/* End Section News */
+
+/* Start Section Details News */
+.section-details-news p{    padding-left: 20px;}
+.section-details-news p::after{
+  left: 0;
+}
+/* End Section Details News */
+/* Start Footer */
+.footer .links a::after{
+  right: 0;
+}
+/* End Footer */
+
+/* Start Media Query */
+@media (max-width: 767.98px) {
+  .top-navbar .navbar-light .navbar-toggler{display: none;}
+  .top-navbar .collapse:not(.show){display: block;}
+  .section-common h1{left: 10%;}
+  .navbar-light .navbar-toggler{right: 0;}
+  .bottom-navbar .navbar-nav .nav-link{padding: 8px 10px;}
+  .bottom-navbar .form-inline .form-control{margin-left: 0;margin-right: 5px;}
+  .header .content {left: 7%;}
+  .section-details .content{left: 8px;}
+  .group-style .content {
+    left: 0%;
+  }
+  .section-details-car h2{    left: calc(100% - 90%);}
+
+
+
+
+  .bottom-navbar .logo img{width: 90px;}
+  .bottom-navbar .links a {margin: 6px;font-size: 13px;position: relative; top: -8px;right: -30px;}
+  .header .content h1 {font-size: 40px;}
+  .header .content a{min-width: 170px;padding: 10px 24px;font-size: 14px;top: 340px;left: -45px;}
+  .button-expoler {min-width: 170px;padding: 10px 24px;font-size: 16px;top: 335px; left: 28%;}
+  .expoler-more .content{    left: 36%;}
+  .expoler-more .col-lg-6:first-of-type .button-expoler {left: -23%;}
+  .expoler-more .col-lg-6:last-of-type .content{left:42%}
+  .expoler-more .col-lg-6:last-of-type .button-expoler{left: -52%;}
+  
+
+
+  .section-diver{height: 180vh;overflow: unset;}
+  .section-diver .content .picec .img-small {width: 55px;margin: 10px;}
+  .section-diver .content  {bottom: 2%;}
+  .section-diver .content .picec{margin-bottom: 10px;}
+  .section-diver .content .picec h2 {margin: 10px;}
+  .section-diver .content .picec .img-large { height: 100px;}
+  .product-brannd .content{left: 0%;bottom: 20%;}
+  .product-brannd .content .col-lg-3 .stat-items::after{content: unset;}
+}
+
+/* End Media Query */

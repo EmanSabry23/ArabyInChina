@@ -1,8 +1,5 @@
 /* Start Global Design */
 html,body{
-  direction: ltr;
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -13,10 +10,7 @@ html,body{
 }
 :root{
   --mainColor: #252728;
-}
-@font-face {
-  font-family: 'Montserrat', sans-serif;
-  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  --subColor: #e90000;
 }
 a,button{
   text-decoration: unset;
@@ -49,12 +43,12 @@ hr{
 }
 .navbar-expand-xl{padding: 0;margin: 0;}
 .navbar-light .navbar-nav .nav-link {
-  color: #fff;
+  color: #fff !important;
   padding: 12px 20px;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: rgba(0,0,0,.7);
+  color: rgba(0,0,0,.7) !important;
   background-color: #fff;
 }
 .navbar-light .navbar-nav .nav-link i{
@@ -63,12 +57,11 @@ hr{
 }
 .navbar-light .navbar-nav .nav-link .fa-chevron-down{
   font-size: 12px !important;
-  padding-left: 7px;
   position: relative;
   top: -1px;
 }
 .navbar-light .navbar-toggler-icon {
-  background-image: url(../images/menu.png);
+  background-image: url(../images/menu.png) !important;
 }
 .line{position: relative;}
 .line::after {
@@ -171,7 +164,7 @@ will-change: transform;
   outline: unset;
 }
 .top-navbar .tab-content{
-  display: block;
+  /* display: block; */
   padding: 20px 60px;
 }
 .top-navbar .tab-content .countrys h5{
@@ -191,6 +184,9 @@ will-change: transform;
 }
 /* End Top Navbar */
 
+
+
+
 /*  Start Bottom Navbar */
 .bottom-navbar{
   background-color: #2A2828;
@@ -205,14 +201,29 @@ will-change: transform;
   position: relative;
   top: 21px;
 }
-.bottom-navbar .links a{
+.bottom-navbar .form-inline .form-control {
+  border: 0;
+  border-radius: 2px;
+  height: 45px;
+}
+.bottom-navbar .form-inline button {
+  height: 45px;
+  border-radius: 2px;
   color: #fff;
-  margin: 0 calc(4.2410714286vw + -31.4285714286px);
+  font-size: 14px;
+  background-color: var(--subColor);
+  border: 1px solid transparent;
 }
-.bottom-navbar .links a:hover{
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
+.bottom-navbar .form-inline button:hover{
+  background-color: var(--mainColor);
+  border: 1px solid var(--subColor);
 }
+.bottom-navbar .navbar-nav .nav-link:hover ,
+.bottom-navbar .navbar-nav .nav-link:focus{
+  background-color: transparent !important;
+  color: var(--subColor) !important;
+}
+.bottom-navbar .dropdown-item{font-size: 13px;}
 /*  End Bottom Navbar */
 
 /* Start Header */
@@ -236,7 +247,7 @@ will-change: transform;
 .header .content{
   position: absolute;
   top: 20px;
-  left: 42%;
+  left: 46%;
   color: #fff;
 }
 .header .content h1{    font-size: 65px;}
@@ -252,7 +263,7 @@ will-change: transform;
   font-size: 18px;
   position: absolute;
   top: 450px;
-  left: -15px;
+  left: -60px;
 }
 .header .content a:hover{
   background-color: #fff;
@@ -370,7 +381,6 @@ will-change: transform;
   position: absolute;
   bottom: 250px;
   font-size: 40px;
-  left: 28%;
 }
 /* End common banner */
 
@@ -388,7 +398,6 @@ will-change: transform;
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
   width: 1px;
   height: 100%;
   background-color: #666;
@@ -425,7 +434,6 @@ will-change: transform;
 .go-top {
   position: fixed;
   top: 60%;
-  right: 3%;
   opacity: 0;
   cursor: pointer;
   text-decoration: none;
@@ -732,13 +740,12 @@ will-change: transform;
   bottom: 10%;
   color: #fff;
   background-color: #0000007d;
-  padding: 0 50px;
+  padding: 20px 50px;
 }
 .group-style .content .col-lg-3 .stat-items::after{
   content: '';
   position: absolute;
   top: 8px;
-  right: 0;
   width: 1px;
   height: 70px;
   background-color: #a7a4a4;
@@ -746,9 +753,6 @@ will-change: transform;
 .group-style .content .col-lg-3:last-of-type .stat-items::after{content: unset;}
 .group-style .content .stat-items{
   text-align: center;
-}
-.group-style .content .stat-items span{
-  font-size: 23px;
 }
 .group-style .content .stat-items b{
   display: block;
@@ -765,10 +769,6 @@ will-change: transform;
   top: 60px;
 }
 .section-details h3{    font-size: 35px;}
-.s-d-2 .content{    left: 18%;}
-.s-d-3 .content{    left: 23%;}
-.s-d-4 .content{    left: 7%;}
-.s-d-5 .content{    left: 10%;}
 /* End Section Details */
 /* Start Section Diversification */
 .section-diver .content{
@@ -814,7 +814,6 @@ will-change: transform;
 .section-blade-battery .content ul li::after{
   content: '';
   position: absolute;
-  left: -20px;
   top: 0;
   width: 2px;
   height: 100%;
@@ -851,8 +850,7 @@ will-change: transform;
   content: '';
   position: absolute;
   top: 0;
-  right: -42px;
-  width: 1px;
+    width: 1px;
   height: 100%;
   background-color: #fff;
 }
@@ -888,7 +886,6 @@ will-change: transform;
     background-color: unset;
     border: unset;
     top: 15px;
-    right: 35px;
     color: #888;
     font-size: 14px;
 }
@@ -984,13 +981,11 @@ will-change: transform;
   font-size: 14px;
   color: var(--mainColor);
   position: relative;
-  padding-left: 20px;
 }
 .section-details-news p::after{
   content: '';
   position: absolute;
   top: 7px;
-  left: 0;
   width: 8px;
   height: 8px;
   background-color: var(--mainColor);
@@ -1010,23 +1005,61 @@ will-change: transform;
 
 /* Start Media Query */
 @media (max-width: 767.98px) {
-  .bottom-navbar .logo img{width: 90px;}
+  .bottom-navbar .collapse:not(.show) {
+    display: none;
+  }
+  .bottom-navbar .navbar{margin-bottom: 0;padding: 10px !important;}
+  .bottom-navbar .navbar-nav{padding: 0;}
+  .top-navbar .links-global a { margin-bottom: 20px;display: block;}
+  .bottom-navbar .logo img{
+    width: 90px;    
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+  .navbar-light .navbar-toggler{
+    position: relative;
+    right: -300px;
+  }
+  .bottom-navbar .form-inline .form-control {
+    height: 40px;
+    width: 60%;
+  }
+  .bottom-navbar .form-inline button{
+    height: 40px;
+  }
+  .bottom-navbar .navbar-nav .nav-link{
+    font-size: 15px;
+  }
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{color: rgba(0,0,0,.5) !important;}
+  .bottom-navbar .navbar-nav .nav-link:hover, .bottom-navbar .navbar-nav .nav-link:focus{
+    color: #fff !important;
+  }
+  .bottom-navbar .dropdown-item{font-size: 12px;}
+  .header img, video{object-fit: none;}
+  .header .content h1 {
+    font-size: 48px;
+    position: relative;
+    left: 19px;
+    top: 60px;
+  }
+
+
+
+
+
   .bottom-navbar .links a {margin: 6px;font-size: 13px;position: relative; top: -8px;right: -30px;}
-  .header .content{left: 32%;}
   .header .content h1 {font-size: 40px;}
   .header .content a{min-width: 170px;padding: 10px 24px;font-size: 14px;top: 340px;left: -45px;}
   .button-expoler {min-width: 170px;padding: 10px 24px;font-size: 16px;top: 335px; left: 28%;}
-  .expoler-more .content{    left: 36%;}
   .expoler-more .col-lg-6:first-of-type .button-expoler {left: -23%;}
-  .expoler-more .col-lg-6:last-of-type .content{left:42%}
   .expoler-more .col-lg-6:last-of-type .button-expoler{left: -52%;}
-  .section-common h1{font-size: 30px;left: 10%;bottom: 175px;}
+  .section-common h1{font-size: 30px;bottom: 175px;}
   .footer { padding: 40px 25px;}
-  .footer .links a{    font-size: 11px;    padding: 0 40px;}
+  .footer .links a{    font-size: 11px;}
   .footer .links a::after{    height: 12px;}
   .footer .social{    margin-top: 20px;float: unset;    margin-left: 40px;}
   .footer p{    font-size: 12px;}
-  .navbar-light .navbar-toggler{position: relative; right: -323px;}
   .section-details-news { padding: 40px 6px;}
   .section-details-news h2{font-size: 24px;}
   .header-news .content{left: 5%;}
@@ -1038,7 +1071,7 @@ will-change: transform;
   .section-details .content{left: 8px;}
   .section-details .content p{    font-size: 14px;}
   .section-blade-battery img{width: 100%;}
-  .section-details-car h2{    left: calc(100% - 90%);}
+  
   .section-details-car .content{left: -4%;}
   .section-details-car .content ul li{margin: 10px;}
   .section-details-car .content ul li p{font-size: 10px;}
